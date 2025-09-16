@@ -1,0 +1,11 @@
+version: 0.0
+os: windows
+files:
+  - source: target\my-app-1.0-SNAPSHOT.jar
+    destination: C:\MavenProject\
+
+hooks:
+  AfterInstall:
+    - location: scripts\start_server.bat
+      timeout: 300
+      runas: Administrator
